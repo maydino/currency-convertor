@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B121F7AE27F0F9F200FA8333 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B121F7AD27F0F9F200FA8333 /* TableViewController.swift */; };
 		B17563BA27EE10DD00ED84D9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17563B927EE10DD00ED84D9 /* Model.swift */; };
 		B1E0F8CC27E817EA00CF2B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0F8CB27E817EA00CF2B4F /* AppDelegate.swift */; };
 		B1E0F8CE27E817EA00CF2B4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0F8CD27E817EA00CF2B4F /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B121F7AD27F0F9F200FA8333 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B17563B927EE10DD00ED84D9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B1E0F8C827E817EA00CF2B4F /* CurrencyConvertor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConvertor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E0F8CB27E817EA00CF2B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B121F7AF27F1727500FA8333 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B121F7AD27F0F9F200FA8333 /* TableViewController.swift */,
+				B1E0F8CF27E817EA00CF2B4F /* ConvertorViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		B17563BB27EE10E200ED84D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,11 +77,11 @@
 		B1E0F8CA27E817EA00CF2B4F /* CurrencyConvertor */ = {
 			isa = PBXGroup;
 			children = (
+				B121F7AF27F1727500FA8333 /* Controllers */,
 				B17563BB27EE10E200ED84D9 /* Models */,
+				B1E0F8DF27E81AEA00CF2B4F /* Views */,
 				B1E0F8CB27E817EA00CF2B4F /* AppDelegate.swift */,
 				B1E0F8CD27E817EA00CF2B4F /* SceneDelegate.swift */,
-				B1E0F8DF27E81AEA00CF2B4F /* Views */,
-				B1E0F8CF27E817EA00CF2B4F /* ConvertorViewController.swift */,
 				B1E0F8D427E817EB00CF2B4F /* Assets.xcassets */,
 				B1E0F8D627E817EB00CF2B4F /* LaunchScreen.storyboard */,
 				B1E0F8D927E817EB00CF2B4F /* Info.plist */,
@@ -157,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B17563BA27EE10DD00ED84D9 /* Model.swift in Sources */,
+				B121F7AE27F0F9F200FA8333 /* TableViewController.swift in Sources */,
 				B1E0F8E127E81B1300CF2B4F /* CurrencyPicker.swift in Sources */,
 				B1E0F8D027E817EA00CF2B4F /* ConvertorViewController.swift in Sources */,
 				B1E0F8CC27E817EA00CF2B4F /* AppDelegate.swift in Sources */,

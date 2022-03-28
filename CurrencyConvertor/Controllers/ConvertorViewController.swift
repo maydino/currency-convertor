@@ -18,9 +18,19 @@ class ConvertorViewController: UIViewController, UIPickerViewDataSource, UIPicke
         return stackView
     } ()
     
+    let amountLabel: UITextField = {
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.placeholder = "amount"
+        textField.backgroundColor = .lightGray
+        textField.textAlignment = .center
+        return textField
+    }()
+    
     let currencyPicker: UIPickerView = {
         let picker = UIPickerView()
         picker.translatesAutoresizingMaskIntoConstraints = false
+        picker.backgroundColor = .green
         return picker
     }()
     
@@ -38,6 +48,7 @@ class ConvertorViewController: UIViewController, UIPickerViewDataSource, UIPicke
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        view.backgroundColor = .white
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
         
@@ -47,6 +58,7 @@ class ConvertorViewController: UIViewController, UIPickerViewDataSource, UIPicke
     func setUp() {
         
         currencyPickerStackView.addSubview(currencyPicker)
+        currencyPickerStackView.addSubview(amountLabel)
         
         view.addSubview(currencyPickerStackView)
         view.addSubview(getCurrencies)
@@ -54,13 +66,19 @@ class ConvertorViewController: UIViewController, UIPickerViewDataSource, UIPicke
         NSLayoutConstraint.activate([
             
             currencyPickerStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
-            currencyPickerStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
-            currencyPickerStackView.widthAnchor.constraint(equalToConstant: view.frame.width*0.8),
-            currencyPickerStackView.heightAnchor.constraint(equalToConstant: 400),
+            currencyPickerStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            currencyPickerStackView.widthAnchor.constraint(equalToConstant: view.frame.width*0.9),
+            currencyPickerStackView.heightAnchor.constraint(equalToConstant: 200),
+            
+            
+            amountLabel.centerXAnchor.constraint(equalTo: currencyPickerStackView.centerXAnchor, constant: 0),
+            amountLabel.topAnchor.constraint(equalTo: currencyPickerStackView.topAnchor, constant: 0),
+            amountLabel.heightAnchor.constraint(equalToConstant: 50),
+            amountLabel.widthAnchor.constraint(equalToConstant: view.bounds.width*0.5),
             
             currencyPicker.centerXAnchor.constraint(equalTo: currencyPickerStackView.centerXAnchor, constant: 0),
-            
-            currencyPicker.centerYAnchor.constraint(equalTo: currencyPickerStackView.centerYAnchor, constant: 0)
+            currencyPicker.bottomAnchor.constraint(equalTo: currencyPickerStackView.bottomAnchor, constant: 0),
+            currencyPicker.heightAnchor.constraint(equalToConstant: 120)
             
             
         ])
