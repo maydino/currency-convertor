@@ -9,25 +9,29 @@
 /* Begin PBXBuildFile section */
 		B121F7AE27F0F9F200FA8333 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B121F7AD27F0F9F200FA8333 /* TableViewController.swift */; };
 		B17563BA27EE10DD00ED84D9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17563B927EE10DD00ED84D9 /* Model.swift */; };
+		B1B4960327F26F38001F8377 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4960227F26F38001F8377 /* ContentView.swift */; };
+		B1B4960527F2CE86001F8377 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4960427F2CE86001F8377 /* TableView.swift */; };
 		B1E0F8CC27E817EA00CF2B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0F8CB27E817EA00CF2B4F /* AppDelegate.swift */; };
 		B1E0F8CE27E817EA00CF2B4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0F8CD27E817EA00CF2B4F /* SceneDelegate.swift */; };
-		B1E0F8D027E817EA00CF2B4F /* ConvertorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0F8CF27E817EA00CF2B4F /* ConvertorViewController.swift */; };
+		B1E0F8D027E817EA00CF2B4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0F8CF27E817EA00CF2B4F /* ViewController.swift */; };
 		B1E0F8D527E817EB00CF2B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E0F8D427E817EB00CF2B4F /* Assets.xcassets */; };
 		B1E0F8D827E817EB00CF2B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1E0F8D627E817EB00CF2B4F /* LaunchScreen.storyboard */; };
-		B1E0F8E127E81B1300CF2B4F /* CurrencyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0F8E027E81B1300CF2B4F /* CurrencyPicker.swift */; };
+		B1E0F8E127E81B1300CF2B4F /* CurrencyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0F8E027E81B1300CF2B4F /* CurrencyPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B121F7AD27F0F9F200FA8333 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B17563B927EE10DD00ED84D9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B1B4960227F26F38001F8377 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B1B4960427F2CE86001F8377 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		B1E0F8C827E817EA00CF2B4F /* CurrencyConvertor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConvertor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E0F8CB27E817EA00CF2B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1E0F8CD27E817EA00CF2B4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B1E0F8CF27E817EA00CF2B4F /* ConvertorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertorViewController.swift; sourceTree = "<group>"; };
+		B1E0F8CF27E817EA00CF2B4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1E0F8D427E817EB00CF2B4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1E0F8D727E817EB00CF2B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1E0F8D927E817EB00CF2B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1E0F8E027E81B1300CF2B4F /* CurrencyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPicker.swift; sourceTree = "<group>"; };
+		B1E0F8E027E81B1300CF2B4F /* CurrencyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				B121F7AD27F0F9F200FA8333 /* TableViewController.swift */,
-				B1E0F8CF27E817EA00CF2B4F /* ConvertorViewController.swift */,
+				B1E0F8CF27E817EA00CF2B4F /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -77,9 +81,9 @@
 		B1E0F8CA27E817EA00CF2B4F /* CurrencyConvertor */ = {
 			isa = PBXGroup;
 			children = (
-				B121F7AF27F1727500FA8333 /* Controllers */,
 				B17563BB27EE10E200ED84D9 /* Models */,
 				B1E0F8DF27E81AEA00CF2B4F /* Views */,
+				B121F7AF27F1727500FA8333 /* Controllers */,
 				B1E0F8CB27E817EA00CF2B4F /* AppDelegate.swift */,
 				B1E0F8CD27E817EA00CF2B4F /* SceneDelegate.swift */,
 				B1E0F8D427E817EB00CF2B4F /* Assets.xcassets */,
@@ -92,7 +96,9 @@
 		B1E0F8DF27E81AEA00CF2B4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B1E0F8E027E81B1300CF2B4F /* CurrencyPicker.swift */,
+				B1E0F8E027E81B1300CF2B4F /* CurrencyPickerView.swift */,
+				B1B4960227F26F38001F8377 /* ContentView.swift */,
+				B1B4960427F2CE86001F8377 /* TableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,8 +175,10 @@
 			files = (
 				B17563BA27EE10DD00ED84D9 /* Model.swift in Sources */,
 				B121F7AE27F0F9F200FA8333 /* TableViewController.swift in Sources */,
-				B1E0F8E127E81B1300CF2B4F /* CurrencyPicker.swift in Sources */,
-				B1E0F8D027E817EA00CF2B4F /* ConvertorViewController.swift in Sources */,
+				B1B4960327F26F38001F8377 /* ContentView.swift in Sources */,
+				B1E0F8E127E81B1300CF2B4F /* CurrencyPickerView.swift in Sources */,
+				B1E0F8D027E817EA00CF2B4F /* ViewController.swift in Sources */,
+				B1B4960527F2CE86001F8377 /* TableView.swift in Sources */,
 				B1E0F8CC27E817EA00CF2B4F /* AppDelegate.swift in Sources */,
 				B1E0F8CE27E817EA00CF2B4F /* SceneDelegate.swift in Sources */,
 			);

@@ -10,41 +10,22 @@ import UIKit
 
 class TableViewController: UIViewController {
     
-    let tableView : UITableView = {
-        let table = UITableView()
-        table.translatesAutoresizingMaskIntoConstraints = false
-        table.backgroundColor = .systemPink
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        return table
-    }()
+    
+    
+    lazy var contentView = TableView()
     
     override func loadView() {
+        
         super.loadView()
-        view.backgroundColor = .white
+        view.backgroundColor = .yellow
         
-        tableView.delegate = self
-        tableView.dataSource = self
         
-        setUpTable()
+        contentView.tableView.delegate = self
+        contentView.tableView.dataSource = self
+        
     }
     
-    func setUpTable() {
-        view.addSubview(tableView)
-        
-        NSLayoutConstraint.activate([
-            
-            
-            tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
-            tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
-            
-            
-        ])
-    }
-    
-    
-    
+  
     
     
 }
