@@ -8,12 +8,13 @@
 import Foundation
 import UIKit
 
+let test = !true
+
 class TableView: UIView {
     
     let tableView : UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
-        table.backgroundColor = .systemPink
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
@@ -28,7 +29,6 @@ class TableView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     // MARK: - UI Set Up Methot
     
     func setUpTable() {
@@ -36,7 +36,6 @@ class TableView: UIView {
         addSubview(tableView)
         
         NSLayoutConstraint.activate([
-            
             
             tableView.leftAnchor.constraint(equalTo: leftAnchor, constant: 0),
             tableView.rightAnchor.constraint(equalTo: rightAnchor, constant: 0),

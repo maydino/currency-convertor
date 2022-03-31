@@ -7,25 +7,19 @@
 
 import UIKit
 
-
 class TableViewController: UIViewController {
     
-    
-    
-    lazy var contentView = TableView()
+    lazy var contentView = TableView().tableView
     
     override func loadView() {
         
         super.loadView()
-        view.backgroundColor = .yellow
+        view = contentView
         
-        
-        contentView.tableView.delegate = self
-        contentView.tableView.dataSource = self
+        contentView.delegate = self
+        contentView.dataSource = self
         
     }
-    
-  
     
     
 }
@@ -39,6 +33,8 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "Huloo"
+        cell.detailTextLabel?.text = "SubText"
         return cell
     }
     
