@@ -11,6 +11,8 @@ class TableViewController: UIViewController {
     
     lazy var contentView = TableView().tableView
     
+    var currencyCount = Int()
+    
     override func loadView() {
         
         super.loadView()
@@ -18,9 +20,57 @@ class TableViewController: UIViewController {
         
         contentView.delegate = self
         contentView.dataSource = self
+        fetchData()
         
     }
     
+    func fetchData () -> [String: Any] {
+        
+        var currencyDictionary = [String: Any]()
+        
+        // 1. Adim
+        let url = URL(string: "http://data.fixer.io/api/latest?access_key=1997ee1dbb1e2a2a84726bc72873fafe&format=1")
+        
+        // Aga git al gel
+        let session = URLSession.shared
+        
+        // Clousure
+        let task = session.dataTask(with: url!) { (data, response, error) in
+            
+            if error != nil {
+                print("error")
+            } else {
+                
+                // 2. Adim
+                if data != nil {
+                    
+                    do {
+                        let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! Dictionary<String, Any>
+                        
+                        //ASYNC
+                        
+                        DispatchQueue.main.async {
+                            if let rates = jsonResponse["rates"] as? [String : Any] {
+                                // print(rates)
+                                self.currencyCount = rates.count
+                                
+                                
+                                if let cad = rates["CAD"] as? Double {
+                                    print("CAD: \(cad)")
+                                    
+                                }
+                            }
+                        }
+                        
+                    } catch {
+                        print("Error!")
+                    }
+                }
+            }
+        }.resume()
+
+        return currencyDictionary
+    }
     
 }
 
@@ -28,7 +78,8 @@ class TableViewController: UIViewController {
 extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        print(currencyCount)
+        return currencyCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
