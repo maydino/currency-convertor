@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TableViewController: UIViewController {
+class CurrencyTableViewController: UIViewController {
+    var fetchData = FetchData()
+
     
     lazy var contentView = TableView().tableView
     
@@ -17,17 +19,18 @@ class TableViewController: UIViewController {
         
         super.loadView()
         view = contentView
-        
+
         contentView.delegate = self
         contentView.dataSource = self
-        fetchData()
         
     }
+
     
-    func fetchData () -> [String: Any] {
-        
-        var currencyDictionary = [String: Any]()
-        
+}
+
+extension CurrencyTableViewController {
+    func fetchData () {
+                
         // 1. Adim
         let url = URL(string: "http://data.fixer.io/api/latest?access_key=1997ee1dbb1e2a2a84726bc72873fafe&format=1")
         
@@ -46,14 +49,11 @@ class TableViewController: UIViewController {
                     
                     do {
                         let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! Dictionary<String, Any>
-                        
-                        //ASYNC
-                        
+
                         DispatchQueue.main.async {
                             if let rates = jsonResponse["rates"] as? [String : Any] {
                                 // print(rates)
-                                self.currencyCount = rates.count
-                                
+                                print(rates)
                                 
                                 if let cad = rates["CAD"] as? Double {
                                     print("CAD: \(cad)")
@@ -68,18 +68,16 @@ class TableViewController: UIViewController {
                 }
             }
         }.resume()
-
-        return currencyDictionary
+        
     }
-    
 }
 
-
-extension TableViewController: UITableViewDelegate, UITableViewDataSource {
+extension CurrencyTableViewController: UITableViewDelegate, UITableViewDataSource {
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(currencyCount)
-        return currencyCount
+        
+        return fetchData.task.rates
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,3 +88,4 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
