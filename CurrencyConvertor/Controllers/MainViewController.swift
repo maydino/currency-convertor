@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
-    var contentView = ContentView()
+    var contentView = MainView()
     
-    let tableViewController = TableViewController()
+    let tableViewController = CurrencyTableViewController()
     
     
     override func loadView() {

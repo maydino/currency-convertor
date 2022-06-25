@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ContentView: UIView {
+class MAinView: UIView {
     
     // MARK: - UI Properties
     

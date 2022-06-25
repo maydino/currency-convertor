@@ -11,7 +11,7 @@ import Foundation
 struct Model {
     
     
-    let currencyName : [String]
+    let currencyName : [String: Int]
     
     
     
