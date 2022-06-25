@@ -11,6 +11,7 @@
 		B17563BA27EE10DD00ED84D9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17563B927EE10DD00ED84D9 /* Model.swift */; };
 		B1B4960327F26F38001F8377 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4960227F26F38001F8377 /* MainView.swift */; };
 		B1B4960527F2CE86001F8377 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4960427F2CE86001F8377 /* TableView.swift */; };
+		B1CA8BE52866E5FE0064BDD8 /* DoneAndCancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA8BE42866E5FE0064BDD8 /* DoneAndCancel.swift */; };
 		B1E0F8CC27E817EA00CF2B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0F8CB27E817EA00CF2B4F /* AppDelegate.swift */; };
 		B1E0F8CE27E817EA00CF2B4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0F8CD27E817EA00CF2B4F /* SceneDelegate.swift */; };
 		B1E0F8D027E817EA00CF2B4F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E0F8CF27E817EA00CF2B4F /* MainViewController.swift */; };
@@ -24,6 +25,7 @@
 		B17563B927EE10DD00ED84D9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B1B4960227F26F38001F8377 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B1B4960427F2CE86001F8377 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		B1CA8BE42866E5FE0064BDD8 /* DoneAndCancel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneAndCancel.swift; sourceTree = "<group>"; };
 		B1E0F8C827E817EA00CF2B4F /* CurrencyConvertor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConvertor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E0F8CB27E817EA00CF2B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1E0F8CD27E817EA00CF2B4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		B1CA8BE32866C9B40064BDD8 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				B1CA8BE42866E5FE0064BDD8 /* DoneAndCancel.swift */,
 				B1E0F8CB27E817EA00CF2B4F /* AppDelegate.swift */,
 				B1E0F8CD27E817EA00CF2B4F /* SceneDelegate.swift */,
 				B1E0F8D427E817EB00CF2B4F /* Assets.xcassets */,
@@ -184,6 +187,7 @@
 				B17563BA27EE10DD00ED84D9 /* Model.swift in Sources */,
 				B121F7AE27F0F9F200FA8333 /* CurrencyTableViewController.swift in Sources */,
 				B1B4960327F26F38001F8377 /* MainView.swift in Sources */,
+				B1CA8BE52866E5FE0064BDD8 /* DoneAndCancel.swift in Sources */,
 				B1E0F8E127E81B1300CF2B4F /* CurrencyPickerView.swift in Sources */,
 				B1E0F8D027E817EA00CF2B4F /* MainViewController.swift in Sources */,
 				B1B4960527F2CE86001F8377 /* TableView.swift in Sources */,
